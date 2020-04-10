@@ -1,0 +1,138 @@
+<!-- style="color: orange; background-color: black" -->
+<!-- <mat-vertical-stepper style="color: orange; background-color: rgb(255, 255, 255)" #stepper>
+    <mat-step>
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      
+      <form [formGroup]="userForm">
+        <mat-form-field> 
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="name" required>
+        </mat-form-field>
+      </form>
+    </mat-step>
+
+    <mat-step>
+
+      <ng-template matStepLabel>Education</ng-template>
+
+    </mat-step>
+
+    <mat-step>
+
+      <ng-template matStepLabel>check and submit</ng-template>
+
+    </mat-step>
+  </mat-vertical-stepper> -->
+
+
+
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button> -->
+<!-- <div style="max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */"> -->
+<mat-vertical-stepper style="color: orange; background-color: rgb(255, 255, 255)" #stepper>
+
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+
+      <mat-form-field style="color: orange; margin-left: 15px">
+        <mat-label> Name </mat-label>
+        <input matInput placeholder="First name, Last name" formControlName="name" required>
+
+      </mat-form-field>
+
+      <mat-form-field style="color: orange; margin-left: 15px">
+        <mat-label> email id </mat-label>
+        <input matInput placeholder="ex: abc@mail.com" formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field style="color: orange; margin-left: 15px">
+        <mat-label> phone number</mat-label>
+        <input matInput placeholder="ex: abc@mail.com" formControlName="phone" required>
+      </mat-form-field><br>
+
+      <div>
+        <button mat-raised-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+
+  <!--address-->
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Fill out your address</ng-template>
+      <mat-form-field style="margin-left: 15px">
+        <mat-label>street</mat-label>
+        <input matInput formControlName="street" placeholder="Ex. 1 Main St, New York, NY">
+      </mat-form-field>
+
+      <mat-form-field style="margin-left: 15px">
+        <mat-label>city</mat-label>
+        <input matInput formControlName="city" placeholder="Ex. kokrajhar">
+      </mat-form-field>
+
+      <mat-form-field style="margin-left: 15px">
+        <mat-label>pincode</mat-label>
+        <input matInput formControlName="pincode" placeholder="Ex. 783360">
+      </mat-form-field>
+      <div>
+        <button mat-button mat-raised-button matStepperPrevious>Back</button>
+        <button style="margin-left: 75px" mat-button mat-raised-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <!--address-->
+
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <!-- <p>You are now done.</p> -->
+    <!-- <button mat-button (click)="showdata()">showdata</button> -->
+    <!-- <button mat-button (click)="stepper.reset()">Reset</button> -->
+    <!-- <label for="file">If you want to upload your CV</label><br>
+        <input type="file" mat-raised-file id="file"> -->
+    <!-- <p>--</p>
+        {{
+        firstFormGroup.value.name
+      }}
+        <p>--</p> -->
+    <!-- <div>
+          <button mat-raised-button>Submit</button>
+        </div>
+      </div> -->
+
+    <!-- <input type="file" style="display: none" #fileInput accept="image/*" (change)="onChangeFileInput()" />
+      <button mat-raised-button color="primary" class="file-select-button" (click)="onClickFileInputButton()">
+        <mat-icon>attach_file</mat-icon>
+        select file
+      </button> -->
+
+    <!-- <p class="file-name" *ngIf="!file; else fileName">ファイルが選択されていません</p>
+      <ng-template #fileName>
+        <p class="file-name">{{ file?.name }}</p>
+      </ng-template> -->
+
+    <!-- <mat-form-field>
+        <ngx-mat-file-input #removableInput formControlName="removablefile" placeholder="Removable Input"></ngx-mat-file-input>
+        <button mat-icon-button matSuffix *ngIf="!removableInput.empty" (click)="removableInput.clear($event)">
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-form-field> -->
+
+    <label for="file-upload" class="custom-file-upload">
+      <i class="fas fa-upload"></i>
+
+
+      upload cv
+    </label>
+    <input id="file-upload" type="file" />
+
+    <p id="demo"></p>
+
+  </mat-step>
+</mat-vertical-stepper>
+<!-- 
+</div> -->

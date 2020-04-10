@@ -1,0 +1,259 @@
+<mat-sidenav-container>
+  <!-- define the side nav menu-->
+  <!-- [opened]="(isHandset$ | async) === false"  -->
+  <mat-sidenav style="background-color  :rgba(11,26,10,100);
+    opacity: 0.86" #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="false" position="end" (click)="toggle()">
+
+    <!-- <mat-toolbar style="background-color:brown;color:whitesmoke">Contents</mat-toolbar> -->
+    <mat-nav-list>
+
+      <!-- <a class="listColor" mat-list-item routerLink="contacts">contacts</a>
+      <a class="listColor" mat-list-item routerLink="contacts">Vision</a>
+      <a class="listColor" mat-list-item routerLink="contacts">Mission</a>
+      <a class="listColor" mat-list-item href="#schoolEnvironment">School Environment</a>
+      <a class="listColor" mat-list-item href="#presidentsMessage">President's Message</a>
+      <a class="listColor" mat-list-item href="#principal">From principal's Desk</a>
+      <a class="listColor" mat-list-item href="#glimpse">Glimpse of School</a>
+      <a class="listColor" mat-list-item href="#admission">Admission</a>
+      <a class="listColor" mat-list-item href="#transfer">Transfer from school</a>
+      <a class="listColor" mat-list-item href="#feeStructure">Fee Structure</a>
+      <a class="listColor" mat-list-item href="#generalRules">General Rules</a>
+      <a class="listColor" mat-list-item href="#fees">Fees</a> -->
+      <a routerLink="" mat-button class="link_button">
+        <mat-icon>
+          home
+        </mat-icon>
+      </a>
+
+      <a routerLink="prospectus" mat-button class="link_button">Online services</a>
+      <a routerLink="news" mat-button class="link_button">News & events</a>
+      <a routerLink="gallery" mat-button class="link_button">Gallery</a>
+      <a routerLink="employment" mat-button class="link_button">Employment</a>
+      <a routerLink="contacts" mat-button class="link_button">Contact us</a>
+      <a routerLink="prospectus" mat-button class="link_button">Prospectus</a>
+      <a routerLink="gallery" mat-button class="link_button_1">Student life & learning</a>
+      <a routerLink="gallery" mat-button class="link_button_1"> Community</a>
+      <a routerLink="gallery" mat-button class="link_button_1">Giving</a><br>
+      <a routerLink="gallery" mat-button class="link_button_1">Boarding</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+
+
+  <mat-sidenav-content style="margin-right: 0px;background-color: rgb(255, 255, 255);">
+    <mat-toolbar class="mtb_1">
+
+      <span style="margin-left: 2px; font-family: fantasy;">Follow us</span>
+
+      <!-- <mat-icon style="margin-left: 20px; color:greenyellow"> face </mat-icon> -->
+      <a href="https://facebook.com" mat-button>
+        <!-- <fa-icon [icon]="faCoffee"></fa-icon> -->
+        <!-- <i class="fab fa-facebook" style="color: rgb(255, 255, 255)"></i> -->
+        <i class="fab fa-facebook" style="color:rgb(255, 255, 255)"></i>
+
+      </a>
+      <a href="https://facebook.com" mat-button>
+        <i class="fab fa-instagram" style="color:rgb(255, 255, 255)"></i>
+      </a>
+      <button mat-button (click)="addToHomeScreen()">
+        <i class="fas fa-cloud-download-alt" style="color:rgb(255, 255, 255)"></i>
+      </button>
+
+      <span class="fx"></span>
+
+      <div fxShow="true" fxHide.lt-md="true" fxLayoutGap="45px">
+
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+
+
+        <a routerLink="" mat-button class="link_button">Home</a>
+        <a routerLink="news" mat-button class="link_button">News & events</a>
+        <a routerLink="gallery" mat-button class="link_button">Gallery</a>
+        <a routerLink="employment" mat-button class="link_button">Employment</a>
+        <a routerLink="contacts" mat-button class="link_button">Contact us</a>
+
+      </div>
+
+      <!-- style="margin-left: 12px"  -->
+
+      <!-- <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"> -->
+      <a (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+        <!-- <mat-icon aria-label="Side nav toggle icon">people</mat-icon>
+        <i class="fab fa-plus-f" style="color:rgb(255, 255, 255)"></i> -->
+        <mat-icon style="background-color: rgb(0, 0, 0);color: white;">menu</mat-icon>
+
+
+      </a>
+
+
+    </mat-toolbar>
+
+
+    <!-- fxShow="true" fxHide.lt-md="true"  -->
+    <mat-toolbar class="mtb_2">
+      <!-- style="margin-top: 50px;max-height: 120px; max-width: 120px;" -->
+      <div style="width: 120px; margin-left: 0px; margin-top: 10px;">
+        <img
+          style="max-width:100%; transform: scale(.1, .1), 0px; margin-top: 0px;opacity: 1; position: relative;z-index: 20;"
+          src="assets/school.png" />
+
+        <span style="margin-left: 25px; font-family: fantasy;" class="link_button">BloomingBudsSchool
+        </span>
+      </div>
+
+
+
+
+      <span class="fx"></span>
+
+      <div fxShow="true" fxHide.lt-md="true" fxLayoutGap="10px">
+
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+
+        <!-- <a routerLink="prospectus" mat-button class="link_button_1">
+          <mat-menu>
+            prospectus
+          </mat-menu>
+        </a> -->
+
+        <!-- <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu> -->
+
+        <!-- <div style="border-color: yellow"> -->
+        <!-- <a href="#" [matMenuTriggerFor]="menu">Prospectus</a>
+        <mat-menu #menu="matMenu" overlapTrigger="true" MenuPositionX="right" MenuPositionY="above">
+          <a href="#" mat-menu-item>New</a>
+          <a href="#" mat-menu-item>Open</a>
+          <a href="#" mat-menu-item [matMenuTriggerFor]="recent">Recent</a>
+        </mat-menu>
+        <mat-menu #recent="matMenu">
+          <a href="#" mat-menu-item>File 1</a>
+          <a href="#" mat-menu-item>File 2</a>
+        </mat-menu> -->
+
+        <!-- </div> btn-outline-primary  -->
+
+        <div class="d-inline-block " ngbDropdown #myDrop="ngbDropdown">
+          <a routerLink="prospectus" class="btn mr-2 link_button_1" id="dropdownManual" ngbDropdownAnchor
+            (focus)="myDrop.open()" style="color: white; background-color: rgb(0, 0, 0)">Prospectus</a>
+
+
+          <!-- <div
+            style="margin-top: 14px;  margin-left: 14px ;position: relative ;background-color: rgb(2, 255, 44);border: solid red ;color: white"
+             aria-labelledby="dropdownManual">
+            <div style="margin-top: 14px; margin-left: 14px; background-color: rgb(100,100,100);color: white" fxLayout
+              fxLayoutGap="15px">
+              <a class="listColor" href="#preface">Preface</a>
+              <a class="listColor" href="#vision">Vision</a>
+              <a class="listColor" href="#mission">Mission</a>
+              <a class="listColor" href="#schoolEnvironment">School Environment</a>
+              <a class="listColor" href="#presidentsMessage">President's Message</a>
+              <a class="listColor" href="#principal">From principal's Desk</a>
+              <a class="listColor" href="#glimpse">Glimpse of School</a>
+              <a class="listColor" href="#admission">Admission</a>
+              <a class="listColor" href="#transfer">Transfer from school</a>
+              <a class="listColor" href="#feeStructure">Fee Structure</a>
+
+
+
+              <a class="listColor" mat-list-item href="#generalRules">General Rules</a>
+              <a class="listColor" mat-list-item href="#fees">Fees</a> -->
+
+          <!-- <button style="background-color: rgb(100,100,100);color: white" ngbDropdownItem>Action - 1</button>
+              <button style="background-color: rgb(100,100,100);color: white" ngbDropdownItem>Another Action</button>
+              <button style="background-color: rgb(100,100,100);color: white" ngbDropdownItem>Something else is
+                here</button> -->
+          <!-- </div> -->
+          <!-- </div> -->
+
+          <!-- <button class="btn btn-outline-success mr-2" (click)="$event.stopPropagation(); myDrop.open();">Open from
+            outside</button>
+          <button class="btn btn-outline-danger mr-2" (click)="$event.stopPropagation(); myDrop.close();">Close from
+            outside</button> -->
+        </div>
+
+        <a routerLink="gallery" mat-button class="link_button_1">Student life & learning</a>
+
+        <a routerLink="gallery" mat-button class="link_button_1"> Community</a>
+
+        <a routerLink="gallery" mat-button class="link_button_1">Giving</a>
+
+        <a routerLink="gallery" mat-button class="link_button_1">Boarding</a>
+
+
+      </div>
+    </mat-toolbar>
+
+    <div fxLayout="column" style="margin-top: 120px;background-color: rgb(0, 0, 0)">
+      <!-- <app-gallery></app-gallery> -->
+      <router-outlet></router-outlet>
+      <div class="bbs_footer">
+        <footer style="margin: 0px">
+          <!-- fxLayout.lt-md="column" -->
+          <mat-toolbar fxLayout class="mtb_footer" fxShow.lt-md="false">
+            <h5 style="font-family: fantasy; font-size: small; color: rgb(255, 0, 191)">
+              @BloomingBudsSchool |
+              Conceptualizing all round development
+
+            </h5>
+            <span class="fx"> </span>
+            <!-- margin-bottom: 210px;  -->
+
+            <h5 style="font-family: fantasy; font-size: medium; color: rgba(167, 235, 240, 0.479)">
+              <a routerLink="gallery" mat-button
+                style="font-family: fantasy; font-size: medium; color: rgb(255, 0, 191)">Home</a>
+              <!-- <mat-icon>people</mat-icon> -->
+              <span>|</span>
+              <a routerLink="contacts" mat-button
+                style="font-family: fantasy; font-size: medium; color: rgb(255, 0, 191)">Contact us</a>
+
+
+            </h5>
+            <!-- <div style="border: red solid; margin: 0px; margin-bottom: 0px;">
+              <img style="height: 400px;width: 400px" src="assets/toolbar.png" />
+            </div> -->
+            <!-- <div style="border: red solid; margin-bottom: 0px; margin-bottom: 0px;">
+              <img style="height: 400px;width: 400px" src="assets/toolbar.png" />
+            </div> -->
+          </mat-toolbar>
+        </footer>
+
+      </div>
+
+
+      <div fxLayout fxShow.gt-md="false" fxLayout.lt-md="column" class="bbs_footer">
+        <footer>
+          <!-- fxLayout.lt-md="column" -->
+          <!-- <mat-toolbar class="mtb_footer" fxLayout fxLayout.lt-md="column"> -->
+
+          <mat-toolbar class="mtb_footer" fxLayout fxLayout.lt-md="column">
+            <h5 style="font-family: fantasy; font-size: small; color: rgb(255, 0, 191)">
+              @BloomingBudsSchool |
+              Conceptualizing all round development
+            </h5>
+
+            <!-- <span class="fx"> </span> -->
+            <h5 style="font-family: fantasy; font-size: medium; color: rgba(167, 235, 240, 0.479)">
+              <a routerLink="gallery" mat-button
+                style="font-family: fantasy; font-size: medium; color: rgb(255, 0, 191)">Home</a>
+              <!-- <mat-icon>people</mat-icon> -->
+              <span>|</span>
+              <a routerLink="contacts" mat-button
+                style="font-family: fantasy; font-size: medium; color: rgb(255, 0, 191)">Contact us</a>
+            </h5>
+          </mat-toolbar>
+        </footer>
+      </div>
+
+
+
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
